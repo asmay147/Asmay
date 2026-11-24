@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asma Azwar | Senior Brand & Visual Designer</title>
+<meta name="description" content="Senior Brand & Visual Designer with 7+ years of experience in visual identities, campaigns and digital design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F0EA; --card:#FFFBF7; --blush:#F4D6D9; --sage:#D3E0CF; --lilac:#DCD4F2; --peach:#FBDDC3;
+  --ink:#2B2037; --muted:#6E6479; --line:#2B203726;
+  --neon:#FF2E9A; --neon-glow:#FF2E9A88;
+}
+:root[data-theme="dark"]{
+  --bg:#1B1424; --card:#261C33; --blush:#3A2536; --sage:#23332E; --lilac:#2F2749; --peach:#3A2B2C;
+  --ink:#F6EDF7; --muted:#B7A9C4; --line:#F6EDF72e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;transition:background .3s,color .3s;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:6px}
+.funky{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--neon);box-shadow:0 0 12px var(--neon-glow);z-index:50}
+nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .logo{font-size:1.4rem;text-decoration:none;color:var(--neon);text-shadow:0 0 14px var(--neon-glow)}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;font-size:.88rem;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+nav ul a:hover{border-color:var(--neon)}
+#theme{border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:99px;padding:5px 14px;font:500 .8rem 'Poppins';cursor:pointer}
+#theme:hover{background:var(--neon);border-color:var(--neon);color:#fff;box-shadow:0 0 16px var(--neon-glow)}
+main{max-width:1080px;margin:0 auto;padding:0 5vw}
+section{padding:70px 0 10px}
+h2{font-size:clamp(2.6rem,7vw,4.4rem);line-height:1;margin-bottom:30px}
+h2::after{content:"";display:block;width:64px;height:5px;border-radius:9px;background:var(--neon);box-shadow:0 0 14px var(--neon-glow);margin-top:10px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;padding-top:60px}
+.hero .role{display:inline-block;background:var(--lilac);padding:6px 16px;border-radius:99px;font-size:.85rem;font-weight:500;margin-bottom:16px}
+.hero h1{font-size:clamp(4.4rem,14vw,9.5rem);line-height:.88;color:var(--ink);cursor:default}
+.hero h1 span{display:block;color:var(--neon);text-shadow:0 0 6px var(--neon-glow),0 0 28px var(--neon-glow);transition:text-shadow .3s}
+.hero h1:hover span{text-shadow:0 0 10px var(--neon),0 0 44px var(--neon)}
+.hero p.bio{margin:22px 0;max-width:52ch;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;text-decoration:none;font:600 .9rem 'Poppins';padding:12px 24px;border-radius:99px;border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.primary{background:var(--neon);border-color:var(--neon);color:#fff;box-shadow:0 0 18px var(--neon-glow)}
+.btn:hover{transform:translateY(-3px)}
+.btn.primary:hover{box-shadow:0 0 30px var(--neon)}
+.photo{position:relative;aspect-ratio:4/5;border-radius:200px 200px 28px 28px;background:linear-gradient(160deg,var(--blush),var(--lilac));display:grid;place-items:center;overflow:hidden;border:2px solid var(--ink)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo b{font-size:5rem;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+.stat{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:18px;text-align:center}
+.stat:nth-child(1){background:var(--blush)} .stat:nth-child(2){background:var(--sage)} .stat:nth-child(3){background:var(--peach)} .stat:nth-child(4){background:var(--lilac)}
+.stat strong{display:block;font:400 2.8rem 'Anton'}
+.stat span{font-size:.8rem;color:var(--muted)}
+
+/* experience */
+.job{background:var(--card);border:1.5px solid var(--line);border-radius:22px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.job:hover,.job[open]{border-color:var(--neon);box-shadow:0 0 22px var(--neon-glow)}
+.job summary{list-style:none;cursor:pointer;padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center}
+.job summary::-webkit-details-marker{display:none}
+.job .co{font-weight:600;font-size:1.1rem}
+.job .when{font-size:.82rem;color:var(--muted);text-align:right}
+.job .ttl{color:var(--muted);font-size:.9rem}
+.job .plus{width:30px;height:30px;border-radius:50%;background:var(--neon);color:#fff;display:grid;place-items:center;font-weight:700;transition:transform .3s;justify-self:end}
+.job[open] .plus{transform:rotate(45deg)}
+.job .body{padding:0 24px 22px;color:var(--muted);max-width:75ch}
+.now{background:var(--neon);color:#fff;font-size:.7rem;font-weight:600;padding:2px 10px;border-radius:99px;margin-left:8px;vertical-align:middle;box-shadow:0 0 12px var(--neon-glow)}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px solid var(--ink);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:99px;font:500 .85rem 'Poppins';cursor:pointer;transition:all .2s}
+.chip:hover,.chip.on{background:var(--neon);border-color:var(--neon);color:#fff;box-shadow:0 0 16px var(--neon-glow);transform:rotate(-2deg) scale(1.05)}
+#skillnote{margin-top:16px;min-height:3.2em;color:var(--muted);font-size:.9rem}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:28px}
+.tool{background:var(--lilac);border-radius:16px;padding:12px 14px;font-size:.85rem;font-weight:500;text-align:center;transition:transform .2s}
+.tool:nth-child(3n+2){background:var(--sage)} .tool:nth-child(3n){background:var(--peach)}
+.tool:hover{transform:translateY(-4px) rotate(2deg)}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.tile{position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;display:flex;align-items:flex-end;padding:18px;text-decoration:none;border:1.5px solid var(--line);background:var(--blush);transition:transform .25s,box-shadow .25s}
+.tile:nth-child(4n+2){background:var(--sage)} .tile:nth-child(4n+3){background:var(--lilac)} .tile:nth-child(4n){background:var(--peach)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .t{position:relative;text-transform:uppercase;letter-spacing:.03em;font:400 1.4rem/1.1 'Anton';background:var(--card);padding:8px 14px;border-radius:14px}
+.tile:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:0 0 28px var(--neon-glow);border-color:var(--neon)}
+.tab{border:1.5px solid var(--ink);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:99px;font:500 .85rem 'Poppins';cursor:pointer;transition:all .2s}
+.tab:hover,.tab.on{background:var(--neon);border-color:var(--neon);color:#fff;box-shadow:0 0 16px var(--neon-glow)}
+.tile.wide{grid-column:span 2;aspect-ratio:2.3/1}
+@media(max-width:560px){.tile.wide{grid-column:span 1;aspect-ratio:1.6/1}}
+.tile small{display:block;font:500 .75rem 'Poppins';text-transform:none;letter-spacing:0;color:var(--muted);margin-top:4px}
+.empty{grid-column:1/-1;background:var(--card);border:1.5px dashed var(--ink);border-radius:22px;padding:34px;text-align:center;color:var(--muted)}
+.hint{margin-top:16px;color:var(--muted);font-size:.9rem}
+
+/* education + certs */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:24px}
+.box h3{font-size:1rem;margin-bottom:14px}
+.edu{margin-bottom:14px}.edu b{display:block}.edu span{color:var(--muted);font-size:.88rem}
+
+/* contact */
+.contact{margin:80px 0 40px;text-align:center;background:var(--ink);color:var(--bg);border-radius:36px;padding:56px 24px}
+.contact h2{color:var(--bg)}
+.contact h2::after{margin:10px auto 0}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.primary{color:#fff;border-color:var(--neon)}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:10px 0 40px}
+#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--neon);color:#fff;padding:10px 22px;border-radius:99px;font-weight:600;font-size:.9rem;box-shadow:0 0 22px var(--neon);transition:transform .35s;z-index:60}
+#toast.show{transform:translate(-50%,0)}
+@media(max-width:780px){
+  nav ul li:not(:last-child){display:none}
+  .hero,.two{grid-template-columns:1fr}
+  .photo{max-width:320px}
+  .stats{grid-template-columns:1fr 1fr}
+  .job summary{grid-template-columns:1fr auto}
+  .job .when{grid-column:1/2;text-align:left}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <a class="logo funky" href="#top">Asma.</a>
+  <ul>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><button id="theme" aria-label="Toggle dark mode">Dark mode</button></li>
+  </ul>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div>
+      <span class="role">Senior Brand &amp; Visual Designer</span>
+      <h1 class="funky">Asma <span>Azwar</span></h1>
+      <p class="bio">Hi, I’m Asma, a brand designer from Lahore. For 7+ years I’ve been the person brands call when they need a look that people remember. I build identities from a blank page, grow tired ones into fresh ones, and make sure every post, ad and package feels like it came from the same brand. Right now I’m running the visuals for 7–8 e-commerce brands at once.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.behance.net/asmaazwar2" target="_blank" rel="noopener">View my Behance</a>
+        <button class="btn" id="copyMail" data-mail="asmaazwar7@gmail.com">Copy email</button>
+        <a class="btn" href="tel:+923276797551">Call me</a>
+      </div>
+    </div>
+    <div class="photo" aria-label="Portrait of Asma Azwar">
+      <b class="funky">AA</b>
+      <img src="photo.jpg" alt="Asma Azwar" onerror="this.remove()">
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><strong class="funky" data-n="7">0</strong><span>years of experience</span></div>
+    <div class="stat"><strong class="funky" data-n="8">0</strong><span>in-house brands at once</span></div>
+    <div class="stat"><strong class="funky" data-n="5">0</strong><span>companies &amp; agencies</span></div>
+    <div class="stat"><strong class="funky" data-n="10">0</strong><span>year-old brands refreshed</span></div>
+  </div>
+
+  <section id="experience">
+    <h2 class="funky">Brands I’ve built</h2>
+
+    <details class="job" open>
+      <summary>
+        <span class="co">Commco Holdings <span class="now">Now</span></span><span class="when">Currently working</span>
+        <span class="ttl">Senior Brand &amp; Visual Designer</span><span class="plus">+</span>
+      </summary>
+      <div class="body">I run the visuals and marketing for 7–8 in-house e-commerce brands across Health &amp; Wellness, Skincare, Beauty and Fashion. I build brands from scratch and give new life to ones that have been on the market for 10+ years, covering identities, campaigns, social content, digital assets and marketing creatives.</div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <span class="co">Maxen Power Supply (MPS)</span><span class="when">1 Aug 2025 – 1 Jan 2026</span>
+        <span class="ttl">Senior Graphic Designer</span><span class="plus">+</span>
+      </summary>
+      <div class="body">I worked on big names like Khaadi, Rivaj, Bata, Servis and Butterfly. I led creative direction across brands and digital platforms, from identities and campaigns to social creatives and UI/UX. I managed and mentored a large team of designers, kept every brand consistent, and worked with other teams to deliver on tight deadlines.</div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <span class="co">Adex 360</span><span class="when">Jan 2022 – Jul 2025</span>
+        <span class="ttl">Senior Graphic Designer</span><span class="plus">+</span>
+      </summary>
+      <div class="body">I built 360° communication strategies and internal brand visuals for social media, presentations, product promotions, in-house events, and online and offline marketing.</div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <span class="co">Communicat Design</span><span class="when">Jan 2021 – Dec 2021</span>
+        <span class="ttl">Associate Art Director</span><span class="plus">+</span>
+      </summary>
+      <div class="body">I came up with creative concepts and visual content for campaigns, social, digital and print. I worked closely with teams and clients to turn ideas into designs that work, with careful typography, layout and brand consistency across many projects and deadlines.</div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <span class="co">SKP Group of Companies</span><span class="when">Jan 2021 – Dec 2021</span>
+        <span class="ttl">Graphic Designer</span><span class="plus">+</span>
+      </summary>
+      <div class="body">I created visual content for digital and print across all kinds of client projects, and grew my skills in branding, layout, typography and visual communication while adapting my work to each brand.</div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <span class="co">Designe 1-1</span><span class="when">2018 – 2019</span>
+        <span class="ttl">Junior Designer</span><span class="plus">+</span>
+      </summary>
+      <div class="body">My first steps in the industry. I supported senior designers on concepts and client materials, helped with layouts, image editing and revisions, and built my foundation in design principles and professional tools.</div>
+    </details>
+  </section>
+
+  <section id="skills">
+    <h2 class="funky">What I do best</h2>
+    <div class="chips" id="chips"></div>
+    <p id="skillnote" aria-live="polite">Tap a skill to see how I use it.</p>
+    <div class="tools" id="tools"></div>
+  </section>
+
+  <section id="work">
+    <h2 class="funky">Work that sells</h2>
+    <div class="chips" id="tabs" role="tablist" style="margin-bottom:22px"></div>
+    <div class="grid" id="grid"></div>
+    <p class="hint">Full projects live on <a href="https://www.behance.net/asmaazwar2" target="_blank" rel="noopener"><b>Behance</b></a>.</p>
+  </section>
+
+  <section id="education">
+    <h2 class="funky">Trained. Certified. Ready.</h2>
+    <div class="two">
+      <div class="box">
+        <h3>Education</h3>
+        <div class="edu"><b>Bachelor’s in Graphic Design (BFA), 2015–2019</b><span>College of Art &amp; Design, University of the Punjab, Lahore</span></div>
+        <div class="edu"><b>Intermediate</b><span>Lahore College for Women University (LCWU)</span></div>
+      </div>
+      <div class="box">
+        <h3>Certifications</h3>
+        <div class="chips" id="certs"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="funky">Let’s make your brand impossible to ignore.</h2>
+    <p style="margin-bottom:26px">Got a brand that needs a face, or a campaign that needs a spark? Write to me, I read every message.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" href="mailto:asmaazwar7@gmail.com">asmaazwar7@gmail.com</a>
+      <a class="btn" href="tel:+923276797551">0327-6797551</a>
+      <a class="btn" href="https://www.behance.net/asmaazwar2" target="_blank" rel="noopener">Behance</a>
+    </div>
+  </section>
+  <footer>© <span id="yr"></span> Asma Azwar</footer>
+</main>
+<div id="toast" role="status">Email copied</div>
+
+<script>
+/* ---- EDIT ME: skills and what each one means ---- */
+const skills = {
+  "Brand Identity":"Logos, palettes, type and tone for brands built from scratch.",
+  "Visual Systems":"Rules and assets that keep 7–8 brands consistent across every channel.",
+  "Art Direction":"Setting the look and feel of shoots, campaigns and layouts.",
+  "Creative Direction & Team Leadership":"Guiding and mentoring designer teams on tight deadlines.",
+  "Campaign Development":"Concept to rollout for launches and seasonal pushes.",
+  "Advertising":"Scroll-stopping ads for digital and print.",
+  "Digital Design":"Web, app and UI/UX visuals.",
+  "Social Media":"Content systems and daily creatives for brand feeds.",
+  "Typography":"Type choices that carry a brand’s personality.",
+  "Visual Storytelling":"Turning a brand story into images people remember.",
+  "Brand Strategy":"Translating positioning into design decisions.",
+  "AI-Powered Design":"Using AI tools to speed up concepts without losing craft.",
+  "E-commerce Ads":"Product-led creatives built to convert."
+};
+const tools = ["Photoshop","Illustrator","InDesign","Figma","After Effects","Premiere Pro","AI Tools","CapCut","Canva"];
+const certs = ["AI Prompt Engineering","Soft Skills","Product Photography","Creative Calligraphy"];
+
+/* ---- EDIT ME: your projects. cat must match a tab name below ----
+   img: paste an image URL or a file path like "images/project1.jpg" (leave "" for a colour tile)
+   url: link to the Behance project page */
+const works = [
+  {title:"Rivaj Skincare & Beauty Ads", cat:"Skincare & Beauty", img:"images/skincare-beauty-cover.png", url:"https://www.behance.net/asmaazwar2", note:"Sunblock, serum and sale campaigns", wide:true},
+  {title:"Nutright KALM", cat:"Health & Wellness", img:"images/health-wellness-cover.png", url:"https://www.behance.net/asmaazwar2", note:"Launch ads for a sugar-free wellness drink", wide:true},
+  {title:"Skincare Infographics", cat:"Skincare & Beauty", img:"", url:"https://www.behance.net/gallery/258333833/skinacre-infographics", note:"Infographics that make skincare easy to understand"},
+  {title:"AcneHit Skincare", cat:"Skincare & Beauty", img:"", url:"https://www.behance.net/gallery/258333397/acnehit-skincare", note:"Brand and visuals for an acne-care line"},
+  {title:"E-commerce Ads", cat:"Ads & Social", img:"images/ecommerce-ads.jpg", url:"https://www.behance.net/asmaazwar2", note:"Sale and product ads for beauty and fragrance"}
+  /* add more like this:
+  ,{title:"Project name", cat:"Fashion", img:"images/fashion1.jpg", url:"https://www.behance.net/gallery/...", note:"One line about it"} */
+];
+const cats = ["All","Skincare & Beauty","Health & Wellness","Fashion","Ads & Social","Brand Identity"];
+
+const $ = s => document.querySelector(s);
+const chips = $('#chips'), note = $('#skillnote');
+Object.keys(skills).forEach(k=>{
+  const b = document.createElement('button'); b.className='chip'; b.textContent=k;
+  b.onclick=()=>{ document.querySelectorAll('.chip.on').forEach(c=>c.classList.remove('on')); b.classList.add('on'); note.textContent=k+": "+skills[k]; };
+  chips.appendChild(b);
+});
+$('#tools').innerHTML = tools.map(t=>`<div class="tool">${t}</div>`).join('');
+$('#certs').innerHTML = certs.map(c=>`<span class="chip" style="cursor:default">${c}</span>`).join('');
+function showWork(cat){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.textContent===cat));
+  const list = works.filter(w=>cat==='All'||w.cat===cat);
+  $('#grid').innerHTML = list.length ? list.map(w=>`<a class="tile${w.wide?' wide':''}" href="${w.url}" target="_blank" rel="noopener">${w.img?`<img src="${w.img}" alt="${w.title}" loading="lazy">`:''}<span class="t">${w.title}<small>${w.note||''}</small></span></a>`).join('')
+    : `<div class="empty">More ${cat.toLowerCase()} projects are on the way. See everything on <a href="https://www.behance.net/asmaazwar2" target="_blank" rel="noopener"><b>my Behance</b></a>.</div>`;
+}
+$('#tabs').innerHTML = cats.map(c=>`<button class="tab" role="tab">${c}</button>`).join('');
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>showWork(t.textContent));
+showWork('All');
+$('#yr').textContent = new Date().getFullYear();
+
+/* progress bar */
+addEventListener('scroll',()=>{
+  const h = document.documentElement;
+  $('#progress').style.width = (h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+
+/* count-up stats, once, when visible */
+const io = new IntersectionObserver((es,o)=>es.forEach(e=>{
+  if(!e.isIntersecting) return; o.unobserve(e.target);
+  const n=+e.target.dataset.n; let i=0;
+  const t=setInterval(()=>{ e.target.textContent=++i+(i===n?'+':''); if(i>=n) clearInterval(t); },90);
+}),{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(el=>io.observe(el));
+
+/* theme */
+const root=document.documentElement, tbtn=$('#theme');
+function setTheme(t){ root.dataset.theme=t; tbtn.textContent=t==='dark'?'Light mode':'Dark mode'; try{localStorage.setItem('theme',t)}catch(e){} }
+let saved=null; try{saved=localStorage.getItem('theme')}catch(e){}
+setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+tbtn.onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+
+/* copy email */
+$('#copyMail').onclick=async e=>{
+  try{ await navigator.clipboard.writeText(e.target.dataset.mail); }catch(_){}
+  const t=$('#toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800);
+};
+</script>
+</body>
+</html>
